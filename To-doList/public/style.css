@@ -1,0 +1,326 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #e27442;
+}
+
+.todo-container {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 20px;
+    width: 600px;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.todo {
+    width: 400px;
+}
+
+.todo-container h2 {
+    padding: 10px;
+    font-family: 'Candal', sans-serif;
+    font-size: 2em;
+}
+
+.todo-header input {
+    width: 92%;
+    border: none;
+    border-radius: 5px;
+    height: 20px;
+    font-family: 'Candal', sans-serif;
+}
+
+.todo-header button {
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 5px;
+    font-family: 'Candal', sans-serif;
+    background-color: rgb(51, 212, 100);
+}
+
+.todo-container ul {
+    list-style: none;
+}
+
+.todo-list-item {
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Candal', sans-serif;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: row;
+}
+
+.todo-list-item form {
+    width: 100%;
+    display: flex;
+}
+
+.todo-list-item input {
+    flex-grow: 2;
+    margin-right: 20px;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Candal', sans-serif;
+}
+
+.todo-list-item button {
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px;
+    font-family: 'Candal', sans-serif;
+    background-color: rgb(51, 212, 100);
+}
+
+.todo-list-item .cancel {
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px;
+    font-family: 'Candal', sans-serif;
+    background-color: rgb(223, 43, 43);
+    margin-left: 5px;
+}
+
+.todo-list-item div {
+    flex-grow: 2;
+}
+
+.todo-list-item .edit {
+    color: rgb(143, 233, 58);
+    margin-right: 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.todo-list-item .remove {
+    color: rgb(243, 96, 96);
+    margin-right: 5px;
+    cursor: pointer;
+    text-decoration: none;
+} */
+body {
+    margin: 20px auto;
+    font-family: 'Lato';
+    /* background: #666; */
+    background-image: url(https://marketplace.canva.com/EAFLchK7wqw/1/0/1600w/canva-beige-brown-simple-organizer-desktop-wallpaper-dSuHiVmRY8s.jpg);
+    /* background-image: url(https://content.wepik.com/statics/10602937/preview-page0.jpg); */
+
+    /* background-size: contain; */
+
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+
+    color: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 2rem;
+
+}
+
+.deleteItemBtn {
+    color: red;
+
+}
+
+p {
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+ul li form {
+    text-decoration: none;
+    color: #000;
+    background: #ffc;
+    display: block;
+    height: 10em;
+    width: 10em;
+    padding: 1em;
+}
+
+ul li {
+    margin: 1em;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+p {
+    font-family: 'Reenie Beanie';
+    font-size: 2rem;
+}
+
+ul li form {
+    text-decoration: none;
+    color: #000;
+    background: #ffc;
+    display: block;
+    height: 10em;
+    width: 10em;
+    padding: 1em;
+    box-shadow: 5px 5px 7px rgba(33, 33, 33, .7);
+}
+
+ul li form {
+    transform: rotate(-6deg);
+}
+
+ul li:nth-child(even) form {
+    transform: rotate(4deg);
+    position: relative;
+    top: 5px;
+}
+
+ul li:nth-child(3n) form {
+    transform: rotate(-3deg);
+    position: relative;
+    top: -5px;
+}
+
+ul li:nth-child(5n) form {
+    transform: rotate(5deg);
+    position: relative;
+    top: -10px;
+}
+
+ul li form:hover,
+ul li form:focus {
+    box-shadow: 10px 10px 7px rgba(0, 0, 0, .7);
+    transform: scale(1.25);
+    position: relative;
+    z-index: 5;
+}
+
+ul li form {
+    text-decoration: none;
+    color: #000;
+    background: #ffc;
+    display: block;
+    height: 10em;
+    width: 10em;
+    padding: 1em;
+    box-shadow: 5px 5px 7px rgba(33, 33, 33, .7);
+    transition: transform .15s linear;
+}
+
+ul li:nth-child(even) form {
+    position: relative;
+    top: 5px;
+    background: #cfc;
+}
+
+ul li:nth-child(3n) form {
+    position: relative;
+    top: -5px;
+    background: #ccf;
+}
+
+
+
+#h2 {
+    color: hsl(0, 0%, 28%);
+    font-size: 50px;
+    font-weight: bold;
+    font-family: monospace;
+    letter-spacing: 7px;
+    cursor: pointer;
+
+}
+
+#h2 span {
+    transition: 0.5s ease-out;
+}
+
+#h2:hover span:nth-child(1) {
+    margin-right: 5px;
+}
+
+#h2:hover span:nth-child(1):after {
+    content: " -";
+}
+
+#h2:hover span:nth-child(2) {
+    margin-left: 30px;
+}
+
+#h2:hover span:nth-child(3) {
+    margin-left: 30px;
+}
+
+
+#h2:hover span {
+    color: brown;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff;
+}
+
+#input {
+    background-color: blanchedalmond
+}
+
+#date {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 65px;
+    letter-spacing: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-size: 400%;
+    animation: move 3s ease infinite;
+    background-image: linear-gradient(85.7deg, rgb(236, 12, 12) 25.2%, rgba(137, 149, 250, 1) 76.8%, rgba(229, 109, 212, 1) 5.9%, rgba(255, 68, 128, 1) 68.2%, rgb(5, 5, 5) 64.2%, rgba(255, 94, 0, 1) 86.4%);
+}
+
+@keyframes move {
+
+    0%,
+    100% {
+        background-position: 200% 0%;
+    }
+
+    50% {
+        background-position: 0% 200%;
+    }
+}

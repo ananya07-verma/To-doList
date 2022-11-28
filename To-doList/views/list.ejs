@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <title>Todo App</title>
+    <link rel="stylesheet" href="/static/stylesheets/style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Candal|Chewy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+
+
+    <h1 id="date">
+        <%= KindofDay %>
+    </h1>
+
+    <div class="todo-container">
+
+        <h2 id="h2"><span>To</span><span>Do</span><span>List</span></h2>
+        <div class="todo">
+            <form action="/" method="POST" class="todo-header">
+                <input type="text" id="input" name="newItem" autocomplete="off">
+                <button type="submit"><span class="fas fa-plus"></span></button>
+            </form>
+            <ul class="todo-list">
+
+                <% for(i=0;i< newListItems.length;i++){ %>
+                    <li>
+                        <form method="post" action="/">
+
+                            <h2>To Do's#<%=i%>
+
+                                    <input type="text" style="display:none" name="delete" value=<%=newListItems[i] %> >
+
+                                    <button class="deleteItemBtn" type="submit">x</button>
+                            </h2>
+
+
+
+                            <p>&nbsp;</p>
+
+                            <p>
+                                <%=newListItems[i] %>
+                            </p>
+
+                        </form>
+
+                    </li>
+                    <% } %>
+            </ul>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
